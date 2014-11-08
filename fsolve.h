@@ -14,10 +14,14 @@ namespace Omega
 	class SolveFailed : public exception
 	{
 	public:
-		SolveFailed() : 
-			exception("Solve failed!")
+		SolveFailed()
 		{
 
+		}
+
+		const char* what() const noexcept override
+		{
+			return "Solve Failed!";
 		}
 	};
 
